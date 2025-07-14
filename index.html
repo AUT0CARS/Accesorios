@@ -170,9 +170,24 @@
             <a class="catalogo-link" href="carros.pdf" target="_blank" download>Descargar PDF</a>
           `;
           break;
-        case 'opcional':
+        case 'newshine':
           html = `
-            <h2>Catálogo Opcional</h2>
+            <h2>Catálogo New Shine</h2>
+            <p>Estamos preparando contenido especial para este catálogo. ¡Muy pronto disponible!</p>
+          `;
+          break;
+          case 'modificar':
+          html = `
+            <h2>Catálogo Partes de Colisión</h2>
+            <p>Estamos preparando contenido especial para este catálogo. ¡Muy pronto disponible!</p>
+          `;
+          break;
+        default:
+          html = '<p>Catálogo no disponible.</p>';
+      }
+          case 'partescolision':
+          html = `
+            <h2>Catálogo Partes de Colisión</h2>
             <p>Estamos preparando contenido especial para este catálogo. ¡Muy pronto disponible!</p>
           `;
           break;
@@ -198,7 +213,9 @@
   <a href="#" onclick="mostrarCatalogo('accesorios')">Accesorios Universales</a>
   <a href="#" onclick="mostrarCatalogo('alerones')">Alerones</a>
   <a href="#" onclick="mostrarCatalogo('tunix')">Tunix</a>
-  <a href="#" onclick="mostrarCatalogo('opcional')">Catálogo Opcional</a>
+  <a href="#" onclick="mostrarCatalogo('newshine')">New Shine </a>
+  <a href="#" onclick="mostrarCatalogo('modificar')">Para Modificar</a>
+  <a href="#" onclick="mostrarCatalogo('partescolision')">Partes de colisión</a>
 </div>
 
 <div class="container">
