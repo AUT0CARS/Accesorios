@@ -145,6 +145,7 @@
       const sidebar = document.querySelector('.sidebar');
       const contenido = document.getElementById('contenido-catalogo');
       let html = '';
+
       switch(nombre) {
         case 'accesorios':
           html = `
@@ -176,7 +177,8 @@
             <p>Estamos preparando contenido especial para este catálogo. ¡Muy pronto disponible!</p>
           `;
           break;
-          case 'modificar':
+        case 'modificar':
+        case 'partescolision':
           html = `
             <h2>Catálogo Partes de Colisión</h2>
             <p>Estamos preparando contenido especial para este catálogo. ¡Muy pronto disponible!</p>
@@ -185,15 +187,7 @@
         default:
           html = '<p>Catálogo no disponible.</p>';
       }
-          case 'partescolision':
-          html = `
-            <h2>Catálogo Partes de Colisión</h2>
-            <p>Estamos preparando contenido especial para este catálogo. ¡Muy pronto disponible!</p>
-          `;
-          break;
-        default:
-          html = '<p>Catálogo no disponible.</p>';
-      }
+
       contenido.innerHTML = html;
       sidebar.classList.remove('open');
     }
@@ -213,7 +207,7 @@
   <a href="#" onclick="mostrarCatalogo('accesorios')">Accesorios Universales</a>
   <a href="#" onclick="mostrarCatalogo('alerones')">Alerones</a>
   <a href="#" onclick="mostrarCatalogo('tunix')">Tunix</a>
-  <a href="#" onclick="mostrarCatalogo('newshine')">New Shine </a>
+  <a href="#" onclick="mostrarCatalogo('newshine')">New Shine</a>
   <a href="#" onclick="mostrarCatalogo('modificar')">Para Modificar</a>
   <a href="#" onclick="mostrarCatalogo('partescolision')">Partes de colisión</a>
 </div>
