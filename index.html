@@ -135,11 +135,17 @@
       }
     }
     .main-image {
-      width: 100%;
-      max-width: 900px;
-      display: block;
-      margin: 2rem auto;
+      width: 48%;
+      margin: 1%;
+      display: inline-block;
       border-radius: 10px;
+      vertical-align: top;
+    }
+    #banner-section.hidden {
+      display: none;
+    }
+    #banner-container {
+      text-align: center;
     }
   </style>
   <script>
@@ -149,6 +155,7 @@
     }
 
     function mostrarCatalogo(nombre) {
+      document.getElementById('banner-section').classList.add('hidden');
       const sidebar = document.querySelector('.sidebar');
       const contenido = document.getElementById('contenido-catalogo');
       let html = '';
@@ -168,14 +175,14 @@
           html = `
             <h2>Catálogo de Alerones</h2>
             <p>Disponemos de modelos deportivos, universales y personalizados para mejorar la estética y aerodinámica de tu coche.</p>
-            <a class="catalogo-link" href="CEDIS 2 FIBRA AUTOCARS.pdf" target="_blank" download>Descargar PDF</a>
+            <a class="catalogo-link" href="alerones.pdf" target="_blank" download>Descargar PDF</a>
           `;
           break;
         case 'tunix':
           html = `
             <h2>Catálogo de Tunix</h2>
             <p>Explora la línea de productos Tunix, incluyendo vehículos modificados, envolventes y kits de personalización estética automotriz.</p>
-            <a class="catalogo-link" href="Tunix.pdf" target="_blank" download>Descargar PDF</a>
+            <a class="catalogo-link" href="carros.pdf" target="_blank" download>Descargar PDF</a>
           `;
           break;
         case 'newshine':
@@ -230,7 +237,15 @@
     <section id="inicio">
       <h2>Bienvenidos</h2>
       <p>AutoCar's Accesorios es tu opción confiable en accesorios, polarizados y rotulación. Nos especializamos en ofrecer productos de calidad con atención personalizada, brindando soluciones prácticas para el equipamiento y mejora de tu vehículo.</p>
-      <img src="Fachada.jpg" alt="Imagen principal de AutoCar's Accesorios" class="main-image">
+    </section>
+
+    <section id="banner-section">
+      <div id="banner-container">
+        <img src="Fachada.jpg" alt="Imagen 1" class="main-image">
+        <img src="logo2main.jpg" alt="Imagen 2" class="main-image">
+        <img src="adentro.jpg" alt="Imagen 3" class="main-image">
+        <img src="pasfaro.jpg" alt="Imagen 4" class="main-image">
+      </div>
     </section>
 
     <section id="contenido-catalogo" class="catalogo-section">
