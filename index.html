@@ -143,6 +143,13 @@
     .main-image {
       width: 100%;
       border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .main-image:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 14px rgba(255, 165, 0, 0.5);
     }
     #banner-section.hidden {
       display: none;
@@ -241,10 +248,10 @@
 
     <section id="banner-section">
       <div class="main-image-grid">
-        <img src="Fachada.jpg" alt="Imagen 1" class="main-image">
-        <img src="adentro.jpg" alt="Imagen 2" class="main-image">
-        <img src="aero.jpg" alt="Imagen 3" class="main-image">
-        <img src="pasfaro.jpg" alt="Imagen 4" class="main-image">
+        <img src="banner1.jpg" alt="Imagen 1" class="main-image">
+        <img src="banner2.jpg" alt="Imagen 2" class="main-image">
+        <img src="banner3.jpg" alt="Imagen 3" class="main-image">
+        <img src="banner4.jpg" alt="Imagen 4" class="main-image">
       </div>
     </section>
 
