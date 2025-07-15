@@ -134,18 +134,18 @@
         margin-left: 0;
       }
     }
+    .main-image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
     .main-image {
-      width: 48%;
-      margin: 1%;
-      display: inline-block;
+      width: 100%;
       border-radius: 10px;
-      vertical-align: top;
     }
     #banner-section.hidden {
       display: none;
-    }
-    #banner-container {
-      text-align: center;
     }
   </style>
   <script>
@@ -240,7 +240,7 @@
     </section>
 
     <section id="banner-section">
-      <div id="banner-container">
+      <div class="main-image-grid">
         <img src="Fachada.jpg" alt="Imagen 1" class="main-image">
         <img src="logo2main.jpg" alt="Imagen 2" class="main-image">
         <img src="adentro.jpg" alt="Imagen 3" class="main-image">
